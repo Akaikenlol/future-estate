@@ -18,11 +18,13 @@
 	font-weight: bold;
 	font-style: normal;
 }
+
 :root {
 	--blue-400: #60a5fa;
 	--blue-600: #2563eb;
 	--slate-400: #94a3b8;
 	--slate-500: #64748b;
+	--gray-700: #374151;
 	--blur: 0px 0px 25px rgba(0, 0, 0, 0.1);
 }
 body {
@@ -31,6 +33,12 @@ body {
 	box-sizing: border-box;
 	font-family: "Comfortaa", sans-serif;
 	font-weight: normal;
+}
+
+h1,
+p {
+	margin: 0;
+	padding: 0;
 }
 .container {
 	max-width: 1200px;
@@ -150,7 +158,7 @@ body {
 	gap: 50px;
 }
 
-.property-card {
+/* .property-card {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -263,4 +271,4 @@ body {
 
 .feedback-icon img {
 	width: 24px;
-}
+} */

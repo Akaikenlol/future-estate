@@ -1,125 +1,9 @@
 const template = document.createElement("template");
 template.innerHTML = `
-	<style>
-	.property-card {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		border-radius: 25px;
-		box-shadow: var(--blur);
-		overflow: hidden;
-	}
-	
-	.property-image {
-		width: 100%;
-		height: 200px;
-		position: relative;
-	}
-	
-	.property-image img {
-		width: 100%;
-		height: 100%;
-		background: gray;
-	}
-	
-	.property-image .model {
-		padding: 10px 15px;
-		font-size: 16px;
-		position: absolute;
-		top: 15px;
-		right: 15px;
-		z-index: 2;
-		color: white;
-		background: var(--blue-400);
-		border-radius: 10px;
-	}
-	
-	.property-content {
-		width: 100%;
-		font-weight: bold;
-	}
-	
-	.p-detail {
-		display: flex;
-		justify-content: space-between;
-	}
-	
-	.p-price {
-		color: var(--blue-600);
-	}
-	
-	.p-location {
-		display: flex;
-		gap: 10px;
-		align-items: center;
-		color: var(--slate-400);
-	}
-	
-	.p-location img {
-		width: 24px;
-		height: auto;
-	}
-	
-	.p-rooms {
-		display: flex;
-		justify-content: space-between;
-		color: var(--slate-400);
-	}
-	
-	.p-rooms img {
-		width: 24px;
-	}
-	
-	.p-bathroom,
-	.p-bedroom,
-	.p-sf {
-		display: flex;
-		align-items: center;
-		gap: 10px;
-	}
-	
-	.divider {
-		width: 100%;
-		height: 1px;
-		background: var(--slate-400);
-		margin: 20px 0;
-	}
-	
-	.p-owner {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-	}
-	
-	.owner-detail {
-		display: flex;
-		align-items: center;
-		gap: 10px;
-	}
-	
-	.owner-detail img {
-		height: 40px;
-		width: 40px;
-		background: gray;
-		border-radius: 50%;
-		overflow: hidden;
-	}
-	
-	.feedback-icon {
-		display: flex;
-		align-items: center;
-		gap: 10px;
-	}
-	
-	.feedback-icon img {
-		width: 24px;
-	}
-	
-	</style>
+	<style>@import url("/components/property-card/property-card.css");</style>
     <div class="property-card">
 		<div class="property-image">
-			<img src="" alt="" />
+			<img src="../assets/images/background-property.png" alt="" />
 			<div class="model">FOR SALE</div>
 		</div>
 		<div class="property-content">
@@ -188,6 +72,11 @@ class PropertyCard extends HTMLElement {
 			this.getAttribute("area");
 		this.shadowRoot.querySelector(".owner-detail p").innerText =
 			this.getAttribute("owner");
+		const linkElem = document.createElement("link");
+		linkElem.setAttribute("rel", "stylesheet");
+		linkElem.setAttribute("href", "style.css");
+
+		shadow.appendChild(linkElem);
 	}
 }
 
