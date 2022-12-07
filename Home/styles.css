@@ -200,9 +200,6 @@ body {
 	height: auto;
 }
 
-.p-location p {
-}
-
 .p-rooms {
 	display: flex;
 	justify-content: space-between;
