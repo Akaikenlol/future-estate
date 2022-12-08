@@ -1,0 +1,42 @@
+@font-face {
+	font-family: "Comfortaa";
+	src: url("../fonts/Comfortaa-Regular.ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Comfortaa";
+	src: url("../assets/fonts/Comfortaa-Light.ttf");
+	font-weight: lighter;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Comfortaa";
+	src: url("../fonts/Comfortaa-Bold.ttf");
+	font-weight: bold;
+	font-style: normal;
+}
+
+:root {
+	--blue-400: #60a5fa;
+	--blue-600: #2563eb;
+	--slate-400: #94a3b8;
+	--slate-500: #64748b;
+	--gray-700: #374151;
+	--blur: 0px 0px 25px rgba(0, 0, 0, 0.1);
+}
+body {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Comfortaa", sans-serif;
+	font-weight: normal;
+}
+
+h1,
+p {
+	margin: 0;
+	padding: 0;
+}
