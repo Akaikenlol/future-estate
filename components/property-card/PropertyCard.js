@@ -7,7 +7,7 @@ template.innerHTML = `
 			<div class="model">FOR SALE</div>
 		</div>
 		<div class="property-content">
-			<div style="padding: 20px">
+			<div style="padding: 20px; background: white;">
 				<div class="p-detail">
 					<p class="p-type">Apartment</p>
 					<p class="p-price">$600,000</p>

@@ -4,15 +4,20 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
+		<link rel="stylesheet" href="../assets/css/global.css" />
 		<link rel="stylesheet" href="styles.css" />
 	</head>
 	<body>
 		<header-component></header-component>
 		<div class="services">
-			<h1>Services</h1>
+			<div></div>
+			<div class="recent">
+				<h1>Recent Listing</h1>
+				<p>We are showing the current trends.</p>
+			</div>
 			<div>
 				<div class="">
-					<p>Sort</p>
+					<p></p>
 					<img src="" alt="" />
 				</div>
 				<div class="">
@@ -21,10 +26,95 @@
 			</div>
 		</div>
 		<div class="service-container">
-			<div class="side-bar"></div>
-			<div style="padding: 50px; grid-column: span 3 / span 3; height: 100vh">
-				<div class="card-item-container"></div>
+			<div class="side-bar">
+				<h1 class="text-xl font-bold">Filter</h1>
+				<div class="location gap-5">
+					<p class="text-lg font-bold">location</p>
+					<select class="select w-full max-w-xs">
+						<option>Homer</option>
+						<option>Marge</option>
+						<option>Bart</option>
+						<option>Lisa</option>
+						<option>Maggie</option>
+					</select>
+				</div>
+				<div class="place gap-5">
+					<p class="text-lg font-bold">Type of Place</p>
+					<div class="grid grid-cols-2 gap-5">
+						<label class="label cursor-pointer">
+							<span class="label-text">All</span>
+							<input type="checkbox" checked="checked" class="checkbox" />
+						</label>
+						<label class="label cursor-pointer">
+							<span class="label-text">Building</span>
+							<input type="checkbox" checked="checked" class="checkbox" />
+						</label>
+						<label class="label cursor-pointer">
+							<span class="label-text">Apartment</span>
+							<input type="checkbox" checked="checked" class="checkbox" />
+						</label>
+						<label class="label cursor-pointer">
+							<span class="label-text">Office</span>
+							<input type="checkbox" checked="checked" class="checkbox" />
+						</label>
+						<label class="label cursor-pointer">
+							<span class="label-text">Shop</span>
+							<input type="checkbox" checked="checked" class="checkbox" />
+						</label>
+						<label class="label cursor-pointer">
+							<span class="label-text">House</span>
+							<input type="checkbox" checked="checked" class="checkbox" />
+						</label>
+					</div>
+				</div>
+				<div class="price-range gap-5">
+					<p class="text-lg font-bold">Price Range</p>
+					<input
+						type="range"
+						min="0"
+						max="100000"
+						value="0"
+						class="range range-xs"
+						step="500"
+						id="range"
+						oninput="amount.value=range.value" />
+					<div>
+						<input
+							type="number"
+							name="amount"
+							id="amount"
+							oninput="range.value=amount.value"
+							disabled />
+						<span>$</span>
+					</div>
+				</div>
+
+				<div class="size flex flex-col gap-5">
+					<p class="text-lg font-bold">Size</p>
+					<div class="w-full flex justify-between gap-5">
+						<label class="input-group input-group-md w-full h-10">
+							<span>Min</span>
+							<input
+								type="text"
+								placeholder="Type here"
+								class="input input-bordered input-md w-full h-10" /> </label
+						><label class="input-group input-group-md w-full h-10">
+							<span>Max</span>
+							<input
+								type="text"
+								placeholder="Type here"
+								class="input input-bordered input-md w-full h-10" />
+						</label>
+					</div>
+				</div>
 			</div>
+			<div class="card-item-container">
+				<property-card></property-card>
+				<property-card></property-card>
+				<property-card></property-card>
+				<property-card></property-card>
+			</div>
+			<div class="map"></div>
 		</div>
 		<footer-component></footer-component>
 
