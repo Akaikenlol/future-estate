@@ -1,44 +1,8 @@
 const headerTemplate = document.createElement("template");
 headerTemplate.innerHTML = `
 	<style>
-	.header {
-		max-width: 1200px;
-		width: 100%;
-		margin: auto;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		padding: 20px;
-	}
-
-	.header img {
-		height: auto;
-		width: 150px;
-	}
-
-	.header ul {
-		display: flex;
-		gap: 50px;
-	}
-
-	.header li {
-		list-style-type: none;
-	}
-
-	.header a {
-		text-decoration: none;
-		color: black;
-	}
-
-	.header button {
-		border: none;
-		background: #2563EB;
-		color: white;
-		padding: 10px 20px;
-		border-radius: 5px;
-		cursor: pointer;
-	}
 	
+	@import url("/components/header/style.css");
 	</style>
     <div class="header">
         <img src="../assets/images/future-estate.png" />
